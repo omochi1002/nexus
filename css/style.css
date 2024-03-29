@@ -667,6 +667,7 @@ SPスタイル(画面幅 767px以下のとき)
    .detail-left > p > img {
     width: 25px;
     height: 25px;
+    border-radius: 50%;
    }
 
    /* 表 */
@@ -772,6 +773,7 @@ SPスタイル(画面幅 767px以下のとき)
    .text-bottom2 > img {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
    }
 
 
