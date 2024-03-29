@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>男女混合バレーチーム NEXUS</title>
+    <meta name="description" content="男女混合社会人バレーチーム NEXUS のホームページです。">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- メディアクエリ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body background="img/back.png">
+    <header>
+      <!-- --------------- ナビ --------------- -->
+      <div class="nav">
+        <!-- ロゴ画像 -->
+        <a href="index.html"><img class="logo-img" src="img/logo.png" alt="トップページに戻る"></a>
+
+        <!-- PC用のナビゲーションメニュー -->
+        <nav class="nav-pc">
+          <a class="nav-pc-menu" href="index.html#teams">チーム紹介</a>
+          <a class="nav-pc-menu" href="index.html#plan">活動予定日</a>
+          <a class="nav-pc-menu" href="index.html#join">メンバー募集</a>
+          <a class="nav-pc-menu" href="index.html#access">アクセス</a>
+          <!-- TODO　Googleで問い合わせフォームを作成したら、URLを記載予定 -->
+          <a class="nav-pc-menu" href="https://form.run/@yahoo-LJIjmrEOqUsXrr9gcwcf">問い合わせ</a>
+        </nav>
+
+        <!-- SP用のナビ -->
+        <!-- メニューボタン -->
+        <img class="menu-sp" src="img/button-menu.png" alt="ナビゲーションメニューを開く" onclick="document.getElementById('nav-sp').style.display = 'block'">
+
+        <!-- SP用のナビゲーションメニュー -->
+        <nav id="nav-sp">
+          <img id="close" src="img/close.png" alt="ナビゲーションを閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
+
+          <a id="logo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img src="img/logo.png" alt="トップページに戻る"></a>
+
+          <div class="menu-list-sp">
+            <a class="menu" href="index.html#teams" onclick="document.getElementById('nav-sp').style.display = 'none'">チーム紹介</a>
+
+            <a class="menu" href="index.html#plan" onclick="document.getElementById('nav-sp').style.display = 'none'">活動予定日</a>
+
+            <a class="menu" href="index.html#join" onclick="document.getElementById('nav-sp').style.display = 'none'">メンバー募集</a>
+
+            <a class="menu" href="index.html#access" onclick="document.getElementById('nav-sp').style.display = 'none'">アクセス</a>
+
+            <a class="menu" href="https://form.run/@yahoo-LJIjmrEOqUsXrr9gcwcf" onclick="document.getElementById('nav-sp').style.display = 'none'">問い合わせ</a>
+          </div>
+          
+        </nav>
+      </div>
+    </header>
+
+    <article>
+      <!-- --------------- メイン画像 --------------- -->
+      <img class="main-img" src="img/main.gif">
+
+      <!-- --------------- チーム紹介 --------------- -->
+      <section id="teams">
+        <!-- タイトル -->
+        <div class="title-outer">
+          <img class="teams-png" src="img/icon.png">
+          <h1 class="title">チーム紹介</h1>
+        </div>
+        
+
+        <!-- 詳細 -->
+        <div class="teams-detail">
+
+          <!-- 左側のコンテンツ -->
+          <div class="detail-left">
+            <p>
+              NEXUS(ネクサス)は、横浜市立和泉小学校で活動している男女混合社会人バレーボールチームです！
+            </p>
+  
+            <p>
+              NEXUSには、「繋がり」という意味合いがあります。<br>そのため、「バレーを通してできた繋がりを大切にしたい」という想いから、このチーム名をつけました！
+            </p>
+  
+            <p>
+              ただいま新規メンバーを大募集中です<img src="img/mark1.png" alt="!!">
+            </p>
+  
+            <p>
+              参加希望の方は「<a href="index.html#join">メンバー募集</a>」をご確認いただければと思います<img src="img/mark2.gif" alt="(^^)">
+            </p>
+          </div>
+
+          <!-- 右側のコンテンツ -->
+          <div class="detail-right">
+            <table>
+                <tr>
+                  <th>チーム設立</th>
+                  <td>2021年10月</td>
+                </tr>
+                <tr>
+                  <th>活動場所</th>
+                  <td>横浜市立和泉小学校　<a class="map-link" href="index.html#access">(アクセス)</a></td>
+                </tr>
+                <tr>
+                  <th>活動日</th>
+                  <td>毎週土曜 / 祝日　18:00 ～ 21:00</td>
+                </tr>
+                <tr>
+                  <th>メンバー数</th>
+                  <td>44名 (2024年3月末時点)</td>
+                </tr>
+                <tr>
+                  <th>男女比</th>
+                  <td>7 : 3</td>
+                </tr>
+                <tr>
+                  <th>年齢層</th>
+                  <td>30代、40代が中心　※50代以上の方もいます</td>
+                </tr>
+                <tr>
+                  <th>雰囲気</th>
+                  <td>明るいメンバーが多いため、楽しい雰囲気のなかバレーができる環境かと思います！</td>
+                </tr>
+                <tr>
+                  <th>活動内容</th>
+                  <td>
+                    パス → シート → スパイク → ゲーム<br>
+                    ※ポジション固定ではなく、ぐるぐるでゲームを行います。
+                  </td>
+                </tr>
+                <tr>
+                  <th>補足</th>
+                  <td>現段階では、チームとして練習試合や大会への参加は行っておりません。</td>
+                </tr>
+            </table>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- --------------- 活動予定日 --------------- -->
+      <section id="plan">
+        <!-- タイトル -->
+        <div class="title-outer">
+          <img class="plan-img" src="img/calender/calender.png">
+          <h1 class="title-plan">活動予定日</h1>
+        </div>
+        
+
+        <!-- 活動予定表 -->
+        <div class="calender">
+          <!-- 上部のカレンダー -->
+          <div class="top-calender">
+            <img class="calender-png calender-png-left" src="img/calender/202404.png" alt="4月の予定表">
+            <img class="calender-png" src="img/calender/202405.png" alt="5月の予定表">
+          </div>
+
+          <!-- 下部のカレンダー -->
+          <div class="bottom-calender">
+            <img class="calender-png calender-png-left" src="img/calender/202406.png" alt="6月の予定表">
+            <img class="calender-png" src="img/calender/202407.png" alt="7月の予定表">
+          </div>
+        </div>
+
+        <p>
+          <img class="cation" src="img/caution.png">学校の都合により、急遽体育館が使用できなくなる場合がございます。<br>そのため、参加希望の方は<span class="detail-text">必ず事前に</span>ご連絡ください。
+        </p>
+       
+      </section>
+
+      <!-- --------------- メンバー募集 --------------- -->
+      <section id="join">
+        <!-- タイトル -->
+        <div class="title-outer">
+          <img class="join-png" src="img/friend.png">
+          <h1 class="title-join">メンバー募集</h1>
+        </div>
+        
+
+        <!-- 説明 -->
+        <p class="join-text">
+          <span class="underline">現在、NEXUSでは<span class="font-color">メンバーを大募集中</span>です<img src="img/mark1.png" alt="!!"></span>
+        </p>
+
+
+
+        <!-- 条件 -->
+
+        <div class="join-list">
+          <!-- 左側のコンテンツ -->
+          <div class="join-list-left">
+            <h2>■下記に当てはまる方を探しています！</h2>
+            <dl>
+              <dd>・30歳以上の男性/女性</dd>
+              <dd>・3年以上のバレー経験者</dd>
+              <dd>・楽しくバレーボールができる方</dd>
+            </dl>
+            
+          </div>
+         
+          <!-- 右側のコンテンツ -->
+          <div class="join-list-right">
+            <h2>■補足事項</h2>
+            <div class="join-outer">
+              <img class="money-png" src="img/money.png">
+              <p class="money-text">1回 ￥200  ※初回無料</p>
+            </div>
+  
+            <div class="join-outer">
+              <img class="car-png" src="img/car.png">
+              <p class="car-text">学校敷地内に駐車可能  <br>※前向き駐車にご協力お願いします。</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="join-text-bottom">
+          <p class="text-bottom1">
+            「楽しくバレーしたい方」、「久しぶりにバレーしたい方」はぜひ一度ご参加ください<img src="img/mark1.png" alt="!!">
+          </p>
+  
+          <p class="text-bottom2">
+            参加ご希望の方、何かご質問がある方はお気軽にお問い合わせいただければと思います<img src="img/mark2.gif" alt="(^^)">
+          </p>
+  
+          <p class="text-bottom3">※他チームへの引き抜きや勧誘目的での参加はご遠慮ください。</p>
+        </div>
+        
+  
+
+        <!-- --------------- 問い合わせボタン --------------- -->
+        <div class="contact">
+          <a href="https://form.run/@yahoo-LJIjmrEOqUsXrr9gcwcf"><img class="contact-button" src="img/button.png"></a>
+        </div>
+        
+      </section>
+
+      <!-- --------------- アクセス --------------- -->
+      <section id="access">
+        <!-- タイトル -->
+        <div class="title-outer">
+          <img class="school-png" src="img/school.png">
+          <h1 class="title-access">アクセス</h1>
+        </div>
+      
+        <!-- 交通手段 -->
+        <div class="map-outer">
+          <div class="access-outer">
+            <div class="access-item-outer">
+              <div class="train-title title">
+                <img class="train-png" src="img/train.png">
+                <h3><span class="access-items">電車でお越しの方</span></h3>
+              </div>
+              
+              <p>市営地下鉄ブルーライン 立場駅下車 <br>徒歩約20分</p>
+              <p>相模鉄道いずみ野線 いずみ野駅下車 <br>徒歩約15分</p>
+            </div>
+            
+            <div class="access-item-outer">
+              <div class="car-title title">
+                <img class="car-img" src="img/car.png">
+                <h3><span class="access-items">車でお越しの方</span></h3>
+              </div>
+              
+              <p>学校敷地内に駐車可能</p>
+              <p>※前向き駐車にご協力お願いいたします。</p>
+            </div>
+            
+            <div class="access-item-outer">
+              <div class="bike-title title">
+                <img class="bike-img" src="img/bike.png">
+                <h3><span class="access-items">バイク/自転車でお越しの方</span></h3>
+              </div>
+              
+              <p>体育館周辺に駐輪可能</p>
+            </div>
+          </div>
+
+         
+        </div>
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.2915961505846!2d139.4937330754556!3d35.422805972671746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601850d038cdfe09%3A0x752877492e5ce9e7!2z5qiq5rWc5biC56uL5ZKM5rOJ5bCP5a2m5qCh!5e0!3m2!1sja!2sjp!4v1711332765149!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </section>
+
+      <div class="top-back">
+        <a href="index.html"><img class="top-back-button" src="img/top-back.png" alt="トップに戻る"></a>
+      </div>
+      
+    </article>
+
+    <!-- --------------- フッター --------------- -->
+    <footer>
+      <p>&copy; NEXUS VOLLEYBALL TEAM</p>
+    </footer>
+  </body>
+</html>

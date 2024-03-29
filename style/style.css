@@ -1,0 +1,939 @@
+/* ------------------
+全体共通
+--------------------- */
+body {
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  background-image: url("/img/back.png");
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ------------------
+PCスタイル(画面幅 768px以上のとき)
+--------------------- */
+@media screen and (min-width: 768px) {
+ /* ********** 全体共通スタイル ********** */
+  h1 {
+    letter-spacing: 0.5em;
+    padding-left: 10px;
+    color: #187FC4;
+    font-size: 40px !important;
+    text-shadow: 2px 2px 0 #FFF33F, -2px 2px 0 #FFF33F, 2px -2px 0 #FFF33F, -2px -2px 0 #FFF33F;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 25px;
+    letter-spacing: 0.5em;
+    color: #001345;
+    background: #D3DEF1;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 0.3em;
+    line-height: 1.5;
+    padding-bottom: 25px;
+  }
+
+  h3 {
+    font-size: 23px;
+    background: linear-gradient(transparent 40%, #D3DEF1 60%);
+    white-space: nowrap;
+  }
+  
+  .title-outer {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  /* ********** ヘッダー ********** */
+  /* ヘッダーのスタイル */
+  header{
+    background-image: url("/img/back.png");
+    position: fixed;
+    top: 0;
+    box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+    width: 100%;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+  }
+
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-pc {
+    margin-right: 20px;
+    line-height: 5;
+  }
+
+  /* リンクの装飾設定(チーム紹介のリンクも含む) */
+  /* ナビ */
+  .nav-pc > a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* aタグの装飾設定 */
+  .nav-pc > a:link , .detail-left > p > a , .map-link {
+    color: #001345;
+  }
+
+  .nav-pc > a:visited , .detail-left > p > a , .map-link {
+    color: #001345;
+  }
+
+  .nav-pc > a:active , .detail-left > p > a , .map-link {
+    color: #001345;
+  }
+
+  .nav-pc > a:hover , .detail-left > p > a , .map-link {
+    color: #001345;
+  }
+
+  .nav-pc > a::after {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #001345;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+  }
+
+  .nav-pc > a:hover::after {
+    transform: scale(1, 1);
+  }
+
+  /* チーム紹介の aタグ */
+  .detail-left > p > a {
+    text-decoration: none;
+    color: #E60012;
+    font-weight: bold;
+  }
+
+  /* SP用のナビゲーション非表示 */
+  .menu-sp , #nav-sp{
+    display: none;
+  }
+
+  /* ********** メイン画像 ********** */
+  .main-img {
+    width: 100%;
+    padding: 50px 20px 20px 0;
+  }
+
+  /* ********** チーム紹介 ********** */
+  /* 全体のスタイル */
+  .teams-detail {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detail-left {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detail-right {
+    padding-top: 15px;
+  }
+
+  /* 画像 */
+  .teams-png {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 25px;
+    padding-right: 10px;
+  }
+
+  .detail-left > p > img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* 表 */
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table , td, th {
+    border: 1px solid #595959;
+    border-collapse: collapse;
+  }
+  
+  th {
+    background: #f0e6cc;
+    width: 20%;
+    height: 30px;
+  }
+
+  td {
+    padding: 10px;
+    width: 80%;
+  }
+
+  td , th {
+    font-size: 19px;
+  }
+  /* ********** 活動予定日 ********** */
+  /* 画像 */
+  .plan-img {
+    width: 50px;
+    height: 50px;
+    padding: 25px 10px 20px 0;
+  }
+
+  /* カレンダー */
+  .calender {
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top-calender , .bottom-calender {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .calender-png {
+    width: 50%;
+    max-width: 400px;
+    padding: 10px;
+  }
+
+  /* 注意 */
+  .cation {
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+  }
+
+  #plan > p {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  /* ********** メンバー募集 ********** */
+  /* 画像 */
+  .join-png {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding-right: 10px;
+    padding-top: 20px;
+  }
+
+  .join-text > span > img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* 説明(上部) */
+  .join-text {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .underline {
+    font-weight: bold;
+    font-size: 27px;
+    position: relative;
+    white-space: pre-line;
+  }
+
+  .underline::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 40%, #f5ff00 60%);
+    animation: underlineAnim 3s ease-in infinite;
+    z-index: -1;
+  }
+
+  @keyframes underlineAnim {
+    0% {
+      right: 100%;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
+  /* 全体スタイル */
+  .join-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+  }
+
+  .join-list-left , .join-list-right {
+    width: 20%;
+    min-width:676px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 左側のコンテンツ(条件) */
+  dd {
+    font-size: 23px;
+    letter-spacing: 0.5em;
+    line-height: 2.5;
+  }
+
+  dl > dd:nth-child(5) {
+    line-height: 1.5;
+  }
+
+  /* 全体のスタイル */
+  .join-outer {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+
+  .join-outer > p {
+    font-size: 23px;
+  }
+
+  /* TODO 追加分 -- ここから -- */
+  .join-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  /* TODO 追加分 -- ここまで -- */
+  /* 画像 */
+  .money-png , .car-png {
+    width: 50px;
+    height: 50px;
+    padding-right: 35px;
+  }
+
+  /* テキスト */
+  .money-text {
+    padding-top: 10px;
+  }
+
+   /* 説明(下部) */
+   /* テキスト */
+   .join-text-bottom {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+   .join-text-bottom > p {
+    text-align: left;
+    font-size: 25px;
+   }
+
+   .text-bottom1 {
+    padding-top: 30px;
+   }
+
+   .text-bottom2 {
+    padding-bottom: 10px;
+   }
+
+   /* 画像 */
+   .text-bottom1 > img {
+    width: 25px;
+    height: 25px;
+   }
+
+   .text-bottom2 > img {
+    width: 30px;
+    height: 30px;
+   }
+
+  /* ********** 問い合わせ ********** */
+   .contact {
+    text-align: center;
+    padding-top: 10px;
+   }
+
+   .contact-button {
+    width: 350px;
+   }
+
+  /* ********** アクセス ********** */
+  /* タイトル画像 */
+   .school-png {
+    width: 100px;
+    height: 80px;
+    padding-right: 15px;
+   }
+
+  /* 全体のスタイル */
+  .map-outer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 左側のコンテンツ */
+  /* 交通手段のスタイル */
+  .access-outer , .map {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .access-outer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .access-item-outer {
+    padding-bottom: 30px;
+    width: calc(100%/3);
+    min-width: 537px;
+  }
+
+  .access-item-outer > p {
+    padding-left: 80px;
+  }
+
+  .title {
+    display: flex;
+  }
+
+  /* 交通手段の画像 */
+  .train-png {
+    width: 80px;
+    height: 80px;
+  }
+
+  .car-img {
+    width: 50px;
+    height: 60px;
+    padding: 13px 20px 0 15px;
+  }
+
+  .bike-img {
+    width: 60px;
+    height: 70px;
+    padding: 15px 15px 0 10px;
+  }
+ 
+  /* 右側のコンテンツ */
+  .map {
+    width: 60%;
+    min-width: 600px;
+    height: 600px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  /* topに戻る */
+  /* 画像 */
+  .top-back-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* スタイル */
+  .top-back {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 60px;
+  }
+  /* フッター */
+  footer {
+    text-align: center;
+  }
+
+  footer > p {
+    font-size: 15px;
+  }
+}
+
+
+/* ------------------
+SPスタイル(画面幅 767px以下のとき)
+--------------------- */
+@media screen and (max-width: 767px) {
+  /* ********** SP全体のスタイル ********** */
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  /* タイトルのスタイル */
+  h1 {
+    color: #187FC4;
+    letter-spacing: 0.5em;
+    padding-left: 10px;
+    font-size: 25px !important;
+    text-shadow: 2px 2px 0 #FFF33F, -2px 2px 0 #FFF33F, 2px -2px 0 #FFF33F, -2px -2px 0 #FFF33F;
+
+  }
+
+  h2 {
+    font-size: 20px;
+    letter-spacing: 0.5em;
+    color: #001345;
+    background: #D3DEF1;
+    display: inline-block;
+  }
+
+
+  p {
+    letter-spacing: 0.3em;
+    line-height: 1.7;
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+
+  h3 {
+    font-size: 20px;
+    background: linear-gradient(transparent 40%, #D3DEF1 60%);
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .title-outer {
+    display: flex;
+    justify-content: center;
+    padding-top: 21px;
+    padding-bottom: 10px;
+  }
+
+   /* ********** ヘッダー ********** */
+  /* ロゴ画像 */
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* ********** ナビゲーション関連 ********** */
+  /* PC用のナビゲーション非表示 */
+  .nav-pc {
+    display: none;
+  }
+
+  /* ナビゲーションのスタイル */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; 
+    background-image: url("/img/back.png");
+    width: 100%;
+    box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  }
+
+  /* **********　ハンバーガーメニュー　********** */
+  /* メニューアイコン */
+  .menu-sp {
+    width: 40px;
+    height: 40px;
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+
+  /* スマホ用ナビゲーションの表示切替 */
+  /* 初期状態、レイアウトと非表示設定 */
+ 
+  #nav-sp {
+    background-image: url("/img/back-sp.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;;
+    display: none;
+    z-index: 100;
+  } 
+
+  /* 閉じるボタン */
+  #close {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+  }
+
+  /* ロゴ画像 */
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+
+  #logo-sp > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding-top: 5px;
+  }
+
+  /* リンク */
+  .menu-list-sp {
+    padding-top: 60px;
+  }
+
+  .menu-list-sp > .menu {
+    text-decoration: none;
+    display: block;
+    /* padding-top: 20px; */
+    /* padding-left: 60px; */
+    margin: 40px 20px 0 40px;
+    height: 50px;
+    font-size: 25px;
+    color: #001345;
+  }
+
+  /* リンクの装飾設定 */
+  .menu-list-sp > a:link {
+    color: #001345;
+  }
+
+  .menu-list-sp > a:hover {
+    color: #001345;
+  }
+
+  .menu-list-sp > a:active {
+    color: #001345;
+  }
+
+  .menu-list-sp > a:visited {
+    color: #001345;
+  }
+
+   /* ********** メイン画像 ********** */
+  .main-img {
+    width: 100%;
+    margin-top: 80px;
+  } 
+
+   /* ********** チーム紹介 ********** */
+   /* 画像 */
+   .teams-png {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-top: 20px;
+   }
+
+   .detail-left > p {
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+
+   .detail-left > p:nth-of-type(4) {
+    padding-bottom: 0;
+   }
+   
+   .detail-left > p > img {
+    width: 25px;
+    height: 25px;
+   }
+
+   /* 表 */
+  table {
+    margin: 40px 10px 25px 10px;
+  }
+
+  table , td, th {
+    border: 1px solid #595959;
+    border-collapse: collapse;
+  }
+
+  th {
+    background: #f0e6cc;
+    width: 25%;
+    height: 30px;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  /* リンクの装飾設定 */
+  .detail-left > p > a {
+    text-decoration: none;
+    color: #E60012;
+    font-weight: bold;
+  }
+
+  .map-link {
+    color: #000;
+  }
+
+  .map-link:link {
+    color: #000;
+  }
+
+  .map-link:visited {
+    color: #000;
+  }
+
+  .map-link:hover {
+    color: #000;
+  }
+
+  .map-link:active {
+    color: #000;
+  }
+
+  /* ********** 活動予定日 ********** */
+  /* 画像 */
+  .plan-img {
+    width: 50px;
+    height: 50px;
+    padding: 20px 5px 45px 0;
+  }
+
+  .cation {
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+  }
+
+  /* カレンダー */
+  .calender {
+    text-align: center;
+  }
+  .calender-png {
+    width: 70%;
+    max-width: 315px;
+  }
+
+  /* 注意事項 */
+  #plan > p {
+    padding: 10px 10px 0 10px;
+  }
+
+  /* ********** メンバー募集 ********** */
+  /* 画像 */
+  .join-png {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding-top: 15px;
+  }
+
+  .join-text > span > img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .money-png , .car-png {
+    width: 50px;
+    height: 50px;
+    padding-right: 35px;
+  }
+
+  .text-bottom1 > img {
+    width: 25px;
+    height: 25px;
+   }
+
+   .text-bottom2 > img {
+    width: 30px;
+    height: 30px;
+   }
+
+
+  /* 説明(上部) */
+  .join-text {
+    text-align: center;
+    font-size: 23px;
+  }
+
+  .underline {
+    font-weight: bold;
+    background: linear-gradient(
+    transparent 60%,
+    #f5ff00 60%
+  );
+  }
+
+  /* 条件 */
+  .join-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  dd {
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    line-height: 2;
+    margin-left: 10px;
+  }
+
+  /* 補足事項 */
+  .join-outer {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+  .join-outer > p {
+    font-size: 18px;
+  }
+
+  .money-text {
+    padding-top: 10px;
+  }
+
+
+  /* 説明(下部) */
+  .join-text-bottom {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+  .join-text-bottom > p {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .text-bottom2 {
+    padding-bottom: 10px;
+  }
+
+  .text-bottom3 {
+    padding-bottom: 10px;
+  }
+
+  /* ********** お問い合わせ ********** */
+  .contact {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+   }
+
+   .contact-button {
+    width: 250px;
+   }
+
+  /* ********** アクセス ********** */
+  /* 画像 */
+  .school-png {
+    width: 80px;
+    height: 70px;
+   }
+
+  /* 全体のスタイル */
+  .map-outer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 交通手段 */
+  /* 画像 */
+  .train-png {
+    width: 60px;
+    height: 60px;
+  }
+
+  .car-img {
+    width: 40px;
+    height: 50px;
+    padding: 13px 20px 0 15px;
+  }
+
+  .bike-img {
+    width: 50px;
+    height: 60px;
+    padding: 15px 15px 0 10px;
+  }
+
+  /* テキスト */
+  .access-item-outer > p {
+    padding-left: 60px;
+  }
+
+  .access-item-outer > p > br {
+    display: none;
+  }
+
+  .title {
+    display: flex;
+  }
+
+  /* 地図 */
+  .map {
+    width: 90%;
+    min-width: 300px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /* ********** トップに戻る ********** */
+  /* 画像 */
+  .top-back-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .top-back {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 60px;
+  }
+
+
+  /* ********** フッター ********** */
+  footer {
+    text-align: center;
+  }
+
+  footer > p {
+    font-size: 12px;
+  }
+}
