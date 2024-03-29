@@ -332,14 +332,12 @@ PCスタイル(画面幅 768px以上のとき)
     font-size: 23px;
   }
 
-  /* TODO 追加分 -- ここから -- */
   .join-list {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
   }
 
-  /* TODO 追加分 -- ここまで -- */
   /* 画像 */
   .money-png , .car-png {
     width: 50px;
@@ -499,7 +497,7 @@ SPスタイル(画面幅 767px以下のとき)
   /* ********** SP全体のスタイル ********** */
   body {
     min-width: 375px;
-    margin: 0;
+    /* margin: 0; */
   }
 
   /* タイトルのスタイル */
@@ -509,7 +507,6 @@ SPスタイル(画面幅 767px以下のとき)
     padding-left: 10px;
     font-size: 25px !important;
     text-shadow: 2px 2px 0 #FFF33F, -2px 2px 0 #FFF33F, 2px -2px 0 #FFF33F, -2px -2px 0 #FFF33F;
-
   }
 
   h2 {
@@ -563,6 +560,7 @@ SPスタイル(画面幅 767px以下のとき)
     position: fixed;
     top: 0; 
     background-image: url("../img/back.png");
+    z-index: 1000;
     width: 100%;
     box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
   }
